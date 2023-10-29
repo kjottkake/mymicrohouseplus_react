@@ -1,0 +1,28 @@
+/* src/TopNav.css */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .topnav li {
+    margin: 0 10px;
+  }
+  
+  .topnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .topnav a:hover {
+    text-decoration: underline;
+  }
+  

@@ -11,40 +11,23 @@ const NavBar = ({ activeTab, handleTabChange }) => {
       };
 
   return (
-    // <div className="bottom-nav">
-    //         <div className="nav-item">
-    //             <img src={homeIcon} alt="Home Button" />
-    //         </div>
-    //         <div className="nav-item">
-    //             <img src={energyIcon} alt="Charge Status Button" />
-    //         </div>
-    //         <div className="nav-item">
-    //             <img src={weatherIcon} alt="Weather Button" />
-    //         </div>
-    // </div>
     <div className="bottom-nav">
-    <div
-      className={`nav-item ${activeTab === 'home' ? 'selected' : ''}`}
-      onClick={() => handleItemClick('home')}
-    >
-      <img src={homeIcon} alt="Home" />
-      <span>Home</span>
+            <div className="nav-item">
+                <a href='/'>
+                    <img src={homeIcon} alt="Home Button" />
+                </a>
+            </div>
+            <div className="nav-item">
+                <a href='/energy'>
+                    <img src={energyIcon} alt="Charge Status Button" />
+                </a>
+            </div>
+            <div className="nav-item">
+                <a href='/weather'>
+                <img src={weatherIcon} alt="Weather Button" />
+                </a>
+            </div>
     </div>
-    <div
-      className={`nav-item ${activeTab === 'search' ? 'selected' : ''}`}
-      onClick={() => handleItemClick('search')}
-    >
-      <img src={energyIcon} alt="Search" />
-      <span>Search</span>
-    </div>
-    <div
-      className={`nav-item ${activeTab === 'profile' ? 'selected' : ''}`}
-      onClick={() => handleItemClick('profile')}
-    >
-      <img src={weatherIcon} alt="Profile" />
-      <span>Profile</span>
-    </div>
-  </div>
   );
 };
 

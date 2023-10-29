@@ -61,11 +61,6 @@ body, html {
 }
 
 /* Panels */
-.panel {
-  flex: 1;
-  display: none;
-  overflow-y: scroll;
-}
 
 .production {
   border: 1px solid salmon;
@@ -74,3 +69,9 @@ body, html {
 .energy {
   border: 1px solid red;
 }
+
+
+.sensor-reading {
+  background-color: #aed2ea;
+}
+

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
 import NavBar from './components/bottomnavbar';
 
@@ -7,22 +7,26 @@ import EnergyPanel from './components/EnergyPanel';
 import WeatherPanel from './components/WeatherPanel';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('home');
+  console.log(window.location) //logs out where I'm currently at
 
-  const handleTabChange = (tabName) => {
-    setActiveTab(tabName);
-  };
+  let component
+  switch(window.location.pathname){
+    case "/":
+      component = <HomePanel />
+      break
+    case "/energy":
+      component = <EnergyPanel />
+      break
+    case "/weather":
+      component = <WeatherPanel />
+      break  
+  }
 
 
   return (
     <div className="App">
-      <div className='app-container'>
-      <NavBar activeTab={activeTab} handleTabChange={handleTabChange} />
-      {activeTab === 'home' && <HomePanel />}
-      {activeTab === 'energy' && <EnergyPanel />}
-      {activeTab === 'weather' && <WeatherPanel />}
-      <h1>Test</h1>
-      </div>
+      <NavBar />
+      {component}
     </div>
   );
 }
