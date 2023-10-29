@@ -2,14 +2,15 @@
 import React from 'react';
 
 function SensorReading(props) {
-  const { label, value, unit } = props;
+  const { label, value, unit, color } = props;
 
   return (
     <div className="sensor-reading">
-      <h2 className="sensor-label">{label}</h2>
-      <p className="sensor-value">
+      
+      <p className={`sensor-value ${color}`}>
         {value} {unit}
       </p>
+      <p className="sensor-label">{label}</p>
     </div>
   );
 }
