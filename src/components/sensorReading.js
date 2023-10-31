@@ -2,9 +2,10 @@
 import React from 'react';
 
 function SensorReading(props) {
-  const { label, value, unit, color } = props;
+  const { label, value, unit, color, link} = props;
 
   return (
+    <a href={`${link}`}>
     <div className="sensor-reading">
       
       <p className={`sensor-value ${color}`}>
@@ -12,6 +13,7 @@ function SensorReading(props) {
       </p>
       <p className="sensor-label">{label}</p>
     </div>
+    </a>
   );
 }
 

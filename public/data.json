@@ -1,0 +1,44 @@
+[
+    {
+      "timestamp": "2023-10-29T08:00:00Z",
+      "interior_temperature_celsius": 22.5,
+      "exterior_temperature_celsius": 15.2,
+      "humidity_percentage": 50.3,
+      "wind_speed_kmph": 5.7
+    },
+    {
+      "timestamp": "2023-10-29T08:00:15Z",
+      "interior_temperature_celsius": 22.6,
+      "exterior_temperature_celsius": 15.1,
+      "humidity_percentage": 50.2,
+      "wind_speed_kmph": 5.8
+    },
+    {
+      "timestamp": "2023-10-29T08:00:30Z",
+      "interior_temperature_celsius": 22.7,
+      "exterior_temperature_celsius": 15.0,
+      "humidity_percentage": 50.1,
+      "wind_speed_kmph": 5.9
+    },
+    {
+      "timestamp": "2023-10-29T08:00:45Z",
+      "interior_temperature_celsius": 22.8,
+      "exterior_temperature_celsius": 14.9,
+      "humidity_percentage": 50.0,
+      "wind_speed_kmph": 6.0
+    },
+    {
+      "timestamp": "2023-10-29T08:01:00Z",
+      "interior_temperature_celsius": 22.9,
+      "exterior_temperature_celsius": 14.8,
+      "humidity_percentage": 49.9,
+      "wind_speed_kmph": 6.1
+    },
+    {
+      "timestamp": "2023-10-29T08:01:15Z",
+      "interior_temperature_celsius": 22.9,
+      "exterior_temperature_celsius": 14.8,
+      "humidity_percentage": 49.9,
+      "wind_speed_kmph": 6.1
+    }
+  ]
