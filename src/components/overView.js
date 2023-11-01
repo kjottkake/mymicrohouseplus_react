@@ -54,6 +54,7 @@ function Overview(props) {
                 <p className='value'>
                     20 m/s NW 
                 </p>
+                <p>756 Meters</p>
             </div>
         </div>
 

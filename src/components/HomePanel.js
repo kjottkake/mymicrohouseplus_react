@@ -11,7 +11,8 @@ const HomePanel = () => {
       <h1><a href='/'>myMicrohouse+</a></h1>
         {/* <TopNav /> */}
         <Overview />
-        <SensorReading  label="Battery" value={100} unit="%" color="green" link="/energy"/>
+        <SensorReading  label="Battery Levels" value={100} unit="%" color="green" link="/energy" border="green"/>
+        <SensorReading  label="Solar Levels" value={6} unit="W" color="green" link="/energy"/>
         <SensorReading label="Interior Temperature" value={23} unit="°C" color="orange"/>
         <SensorReading label="Exterior Temperature" value={-2} unit="°C" color="blue" link="/weather"/>
         <SensorReading label="Humidity" value={65} unit="%" color="blue" />
