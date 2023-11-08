@@ -1,0 +1,31 @@
+.test-box {
+    background-color: palevioletred;
+    display: inline-block;
+    padding: 120px;
+    border-radius: 15px;
+    margin-left: 5%;
+    font-size: 5rem;
+}
+
+.counting-animation {
+    font-size: 124px;
+    font-weight: bold;
+    text-align: center;
+    animation: counting 2s ease-in;
+  }
+  
+.count {
+display: inline-block;
+width: 2em;
+}
+  
+  @keyframes counting {
+    from {
+      /* transform: scale(4); */
+      /* opacity: 0; */
+    }
+    to {
+      /* transform: scale(4); */
+      /* opacity: 1; */
+    }
+  }
