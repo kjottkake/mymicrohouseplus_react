@@ -8,10 +8,10 @@ function Overview(props) {
     <div className="overview">
         <div className='overview-topbar'>
             <p className="overview-location">
-                Livegen, Bø i Telemark
+                Mustad Næringspark
             </p>
             <p className="overview-temperature">
-                23°C
+                2°C
             </p>
             <p className="overview-hi">
                 HI: -1°C

@@ -110,6 +110,10 @@ h1 {
   
 }
 
+.sensor-value.red {
+  color: #FF5F1F;
+}
+
 .sensor-value.blue{
   color: #8ECAE6;
 }
