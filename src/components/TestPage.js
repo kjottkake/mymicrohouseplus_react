@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './testpage.css';
 const TestPage = () => {
 
-    const [count, setCount] = useState(89);
+    const [count, setCount] = useState(0);
 
     useEffect(() => {
       const interval = setInterval(() => {
-        if (count < 100) {
+        if (count < 6) {
           setCount(count + 1);
         } else {
           clearInterval(interval); // Stop the counting animation when it reaches 100
@@ -23,9 +23,9 @@ const TestPage = () => {
     <div className='homePanel'>
       <h1><a href='/'>myMicrohouse+</a></h1>
 
-      <div className="counting-animation">
-      <span className="count">{count}</span>
-    </div>
+        <div className="counting-animation">
+            <span className="count">{count}</span>
+        </div>
 
 
     </div>

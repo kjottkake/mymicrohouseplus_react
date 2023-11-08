@@ -11,7 +11,9 @@
     font-size: 124px;
     font-weight: bold;
     text-align: center;
-    animation: counting 2s ease-in;
+    transition-timing-function: ease-in;
+    transition-timing-function: cubic-bezier(.3,.24,.45,.93);
+  
   }
   
 .count {
@@ -22,10 +24,10 @@ width: 2em;
   @keyframes counting {
     from {
       /* transform: scale(4); */
-      /* opacity: 0; */
+      opacity: 0;
     }
     to {
       /* transform: scale(4); */
-      /* opacity: 1; */
+      opacity: 1;
     }
   }
