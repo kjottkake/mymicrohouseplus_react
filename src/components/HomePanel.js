@@ -12,7 +12,7 @@ const HomePanel = () => {
   const [sensorData, setSensorData] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/weather')  // Replace with your server URL
+    fetch('http://10.22.204.35:3001/weather')  // Replace with your server URL
         .then(response => response.json())
         .then(data => {
             setSensorData(data);
