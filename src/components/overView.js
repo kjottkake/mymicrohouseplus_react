@@ -52,9 +52,9 @@ function Overview(props) {
                     Wind
                 </p>
                 <p className='value'>
-                    20 m/s NW 
+                    2 m/s
                 </p>
-                <p>756 Meters</p>
+                <p>256 Meters</p>
             </div>
         </div>
 
