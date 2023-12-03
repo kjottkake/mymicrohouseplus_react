@@ -1,0 +1,262 @@
+.daily-forecast {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px 0;
+      background-color: #B0D9CB;
+      margin-top: 20px;
+    }
+    
+    .daily-forecast h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+      padding: 10px;
+    }
+    
+    .daily-forecast ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .daily-forecast li {
+      width: 200px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .daily-forecast li:hover {
+      transform: scale(1.05);
+    }
+    
+    .daily-forecast table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+    }
+    
+    .daily-forecast th, .daily-forecast td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      background-color: #f2f2f2;
+    }
+    
+    .daily-forecast th {
+      background-color: #f2f2f2;
+    }
+    
+    .daily-forecast tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .daily-forecast tbody tr:hover {
+      background-color: #e1e1e1;
+    }
+    
+    .daily-forecast tbody tr:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .daily-forecast h3,
+    .daily-forecast th,
+    .daily-forecast td,
+    .daily-forecast li {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .daily-weather-square {
+      cursor: pointer;
+      border: 2px solid #af614c; 
+      border-radius: 8px; 
+      padding: 10px;
+      margin: 15px; 
+      transition: border-color 0.3s ease-in-out; 
+    }
+    
+    .daily-weather-square h3 {
+      margin: 0;
+    }
+    
+    .daily-weather-square.expanded {
+      border-color: #333; 
+    }
+    
+
+    @media only screen and (max-width: 767px) {
+      .daily-forecast table {
+        width: 100%;
+        overflow-x: auto;
+        border-radius: 8px;
+      }
+    
+      .daily-forecast thead,
+      .daily-forecast tbody,
+      .daily-forecast th,
+      .daily-forecast td,
+      .daily-forecast tr {
+        display: block;
+      }
+    
+      .daily-forecast thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+    
+      .daily-forecast tr {
+        margin-bottom: 15px;
+      }
+    
+      .daily-forecast td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        border-radius: 5px;
+      }
+    
+      .daily-forecast td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+
+      .daily-forecast tbody tr:hover {
+            background-color: #e1e1e1; 
+          }
+    
+      .daily-forecast td:nth-of-type(1):before {
+        content: "Date:";
+      }
+    
+      .daily-forecast td:nth-of-type(2):before {
+        content: "Max Temperature:";
+      }
+    
+      .daily-forecast td:nth-of-type(3):before {
+        content: "Min Temperature:";
+      }
+    
+      .daily-forecast td:nth-of-type(4):before {
+        content: "Rain Sum:";
+      }
+    
+      .daily-forecast td:nth-of-type(5):before {
+        content: "Sunrise";
+      }
+    
+      .daily-forecast td:nth-of-type(6):before {
+        content: "Sunset";
+      }
+    
+      .daily-forecast td:nth-of-type(2)::after,
+      .daily-forecast td:nth-of-type(3)::after {
+        content: " °C";
+      }
+    
+      .daily-forecast td:nth-of-type(4)::after {
+        content: " mm";
+      }
+    
+      /*remember to make it responsive for 390px!*/
+
+      @media only screen and (max-width: 390px) {
+        .daily-forecast tbody tr {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          background-color: #ffffff;
+          margin-bottom: 15px;
+          overflow: hidden;
+        }
+    
+        .daily-forecast tbody tr:hover {
+          background-color: #e1e1e1;
+        }
+    
+        .daily-forecast table {
+          width: 100%;
+          overflow-x: auto;
+        }
+    
+        .daily-forecast thead,
+        .daily-forecast tbody,
+        .daily-forecast th,
+        .daily-forecast td,
+        .daily-forecast tr {
+          display: block;
+        }
+    
+        .daily-forecast thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+    
+        .daily-forecast tr {
+          margin-bottom: 15px;
+        }
+    
+        .daily-forecast td {
+          border: none;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+          padding-left: 50%;
+        }
+    
+        .daily-forecast td:before {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+        }
+    
+        .daily-forecast td:nth-of-type(1):before {
+          content: "Date:";
+        }
+    
+        .daily-forecast td:nth-of-type(2):before {
+          content: "Max Temperature:";
+        }
+    
+        .daily-forecast td:nth-of-type(3):before {
+          content: "Min Temperature:";
+        }
+    
+        .daily-forecast td:nth-of-type(4):before {
+          content: "Rain Sum:";
+        }
+    
+        .daily-forecast td:nth-of-type(5):before {
+          content: "Sunrise";
+        }
+    
+        .daily-forecast td:nth-of-type(6):before {
+          content: "Sunset";
+        }
+    
+        .daily-forecast td:nth-of-type(2)::after,
+        .daily-forecast td:nth-of-type(3)::after {
+          content: " °C";
+        }
+    
+        .daily-forecast td:nth-of-type(4)::after {
+          content: " mm";
+        }
+      }
+    }
+    

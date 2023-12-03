@@ -1,0 +1,233 @@
+
+.hourly-forecast h3,
+.hourly-forecast th,
+.hourly-forecast td,
+.hourly-forecast li {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+
+
+.hourly-weather {
+      background-color: #f9f9f9;
+      padding: 15px;
+     border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+.hourly-weather ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .hourly-weather li {
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .hourly-forecast {
+      margin-top: 20px;
+      background-color: #B0D9CB;;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    
+    .hourly-forecast h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+      padding: 10px;
+    }
+    
+    .hourly-forecast ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .hourly-forecast li {
+
+      width: 200px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      
+    }
+    
+    .hourly-forecast li:hover {
+      transform: scale(1.05);
+    }
+
+    .hourly-forecast table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow-x: auto;
+     
+    /*  border-radius: 10px; 
+      overflow: hidden;
+      background-color: #ffffff; */
+    }
+    
+    .hourly-forecast th, .hourly-forecast td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  background-color:rgba(250, 250, 250, 0.911);
+}
+    
+    .hourly-forecast th {
+      background-color: #f2f2f2;
+    }
+    
+    .hourly-forecast tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .hourly-forecast tbody tr:hover {
+      background-color: #e1e1e1;
+    }
+
+
+    .hourly-weather-square {
+      cursor: pointer;
+      border: 2px solid #af614c; 
+      border-radius: 8px; 
+      padding: 10px;
+      margin: 15px; 
+      transition: border-color 0.3s ease-in-out; 
+    }
+    
+    .hourly-weather-square h3 {
+      margin: 0;
+    }
+    
+    .hourly-weather-square.expanded {
+      border-color: #333; 
+    }
+
+    @media only screen and (max-width: 390px) {
+
+     
+
+      .hourly-forecast tbody tr {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        border-radius: 10px; 
+        background-color: #ffffff; 
+        margin-bottom: 15px; 
+        overflow: hidden;
+      }
+    
+      .hourly-forecast tbody tr:hover {
+        background-color: #e1e1e1; 
+      }
+    
+      .hourly-forecast table {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; 
+      }
+    
+      .hourly-forecast thead,
+      .hourly-forecast tbody,
+      .hourly-forecast th,
+      .hourly-forecast td,
+      .hourly-forecast tr {
+        display: block;
+      }
+    
+      .hourly-forecast thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+    
+      .hourly-forecast tr {
+        margin-bottom: 15px;
+      }
+    
+      .hourly-forecast td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+       
+      }
+    
+      .hourly-forecast td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+    
+      .hourly-forecast td:nth-of-type(1):before {
+        content: "Time:";
+      }
+    
+      .hourly-forecast td:nth-of-type(2):before {
+        content: "Temperature:";
+      }
+    
+      .hourly-forecast td:nth-of-type(3):before {
+        content: "Rain:";
+      }
+
+      .hourly-forecast td:nth-of-type(4):before {
+        content: "Showers:";
+      }
+      .hourly-forecast td:nth-of-type(5):before {
+        content: "Snowfall:";
+      }
+      .hourly-forecast td:nth-of-type(6):before {
+        content: "Snow Depth:";
+      }
+      .hourly-forecast td:nth-of-type(7):before {
+        content: "Wind Speed:";
+      }
+      .hourly-forecast td:nth-of-type(8):before {
+        content: "UV Index:";
+      }
+      .hourly-forecast td:nth-of-type(9):before {
+        content: "Time of day:";
+      }
+
+      /*for temp*/
+      .hourly-forecast td:nth-of-type(2)::after {
+            content: """ °C";
+          }
+
+          /*for rain, showers and snowfall*/
+          .hourly-forecast td:nth-of-type(3)::after, .hourly-forecast td:nth-of-type(4)::after, .hourly-forecast td:nth-of-type(5)::after {
+            content: """ mm";
+          }
+
+          .hourly-forecast td:nth-of-type(6)::after {
+            content: """ cm";
+          }
+
+          .hourly-forecast td:nth-of-type(7)::after {
+            content: """ m/s";
+          }
+
+
+    }
+    
