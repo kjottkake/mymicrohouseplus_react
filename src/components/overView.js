@@ -1,23 +1,45 @@
 // overView.js
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios'; // Assuming you are using axios for API requests
+
 
 function Overview(props) {
   const { location, temp, tempHi, tempLo, humidity, precipitation, pressure, wind} = props;
 
+  const [altitude, setAltitude] = useState(null);
+
+  // Define a function to fetch altitude data when the last <p> tag is clicked
+  const fetchAltitudeData = async () => {
+    try {
+      // Make an API request to fetch altitude data
+      const response = await axios.get('http://192.168.10.170:3001/altitude');
+      
+      //praes json response
+      const responseData = response.data; 
+
+      // Update the altitude state with the received data
+      setAltitude(responseData.altitude);
+    } catch (error) {
+      console.error('Error fetching altitude data:', error);
+    }
+  };
+
+
   return (
     <div className="overview">
         <div className='overview-topbar'>
+            
             <p className="overview-location">
                 Mustad Næringspark
             </p>
             <p className="overview-temperature">
-                2°C
+                -9°C
             </p>
             <p className="overview-hi">
-                HI: -1°C
+                HI: -7°C
             </p>
             <p className="overview-lo">
-                LO: -7°C
+                LO: -11°C
             </p>
             {/* <image></image> */}
         </div>
@@ -28,7 +50,7 @@ function Overview(props) {
                     Humidity
                 </p>
                 <p className='value'>
-                    30%
+                    {humidity}%
                 </p>
             </div>
             <div className='overview-bottombar-item'>
@@ -36,7 +58,7 @@ function Overview(props) {
                     Precipitation
                 </p>
                 <p className='value'>
-                    30%
+                    0%
                 </p>
             </div>
             <div className='overview-bottombar-item'>
@@ -44,7 +66,7 @@ function Overview(props) {
                     Pressure
                 </p>
                 <p className='value'>
-                    30%
+                    {pressure}
                 </p>
             </div>
             <div className='overview-bottombar-item'>
@@ -54,7 +76,7 @@ function Overview(props) {
                 <p className='value'>
                     2 m/s
                 </p>
-                <p>256 Meters</p>
+                <p onClick={fetchAltitudeData}>{altitude} m MSL</p>
             </div>
         </div>
 
