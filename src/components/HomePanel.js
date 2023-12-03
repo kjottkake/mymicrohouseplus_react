@@ -12,7 +12,7 @@ const HomePanel = () => {
   const [sensorData, setSensorData] = useState(null);
 
   useEffect(() => {
-    fetch('http://10.22.204.35:3001/weather')  // Replace with your server URL
+    fetch('http://192.168.10.170:3001/weather')  // Replace with your server URL
         .then(response => response.json())
         .then(data => {
             setSensorData(data);
@@ -27,18 +27,19 @@ if (!sensorData) {
 }
 
 // const lastEntry = sensorData[sensorData.length - 1]; // Get the last entry
+const lastEntry = sensorData
 
 // Adjusting for the nested structure
-const lastEntry = sensorData.sensor_data[sensorData.sensor_data.length - 1];
+// const lastEntry = sensorData.sensor_data[sensorData.sensor_data.length - 1];
   return (
     <div className='homePanel'>
       <h1><a href='/'>myMicrohouse+</a></h1>
         {/* <TopNav /> */}
-        <Overview />
+        <Overview humidity={lastEntry.humidity_percentage} pressure={lastEntry.pressure_hpa}/>
         <SensorReading  label="Battery Levels" value={100} unit="%" color="green" link="/energy" border="green"/>
-        <SensorReading  label="Solar Levels" value={6} unit="W" color="green" link="/energy"/>
+        <SensorReading  label="Solar Levels" value={1} unit="W" color="green" link="/energy"/>
         <SensorReading label="Interior Temperature" value={lastEntry.temperature_celsius} unit="°C" color="orange"/>
-        <SensorReading label="Exterior Temperature" value={-2} unit="°C" color="blue" link="/weather"/>
+        <SensorReading label="Exterior Temperature" value={-9} unit="°C" color="blue" link="/weather"/>
         <SensorReading label="Humidity" value={lastEntry.humidity_percentage} unit="%" color="blue" />
         <SensorReading label="of 100 Liter Tank Left" value={65} unit="Liters" color="blue"/>
 
